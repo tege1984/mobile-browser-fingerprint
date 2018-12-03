@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+      <title>Web Browser's Fingerprint</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="styles/style.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+      <link rel="icon" href="image/favicon.ico" type="image/x-icon" />
+      <script src="scripts/fingerprint2.js"></script>
+      <script src="scripts/DetectRTC.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="jumbotron">
+      <h2>Web Browser's Fingerprint</h2>
+      <p> This website is built for a master's thesis work at University of Helsinki, department of Computer Science. It collects information anonymously from your browser for fingerprinting purpose. The information will be stored on our server and will be
+        analyzed to measure the uniqueness of your browser. </p>
+    <p>When you click the button below your browser will ask your to grant permissions for the website to the following features (if supported):</p>
+        <ul>
+            <!--<li>Bluetooth</li> //-->
+            <li>Geolocation</li>
+            <li>Web-camera and microphone</li>
+            <li>Notification</li>
+            <li>MIDI devices</li>
+        </ul>
+        <p>Please grant the permissions you feel comfortable granting to websites. <strong>We do not record neither video, nor audio. We do not send notifications or use MIDI devices.</strong> We ask for this permission to assess the avaliable features of your browser and how much information they disclose about you. </p>
+    </div>
+    <p align="center"> <button type="button" id="btn" class="btn btn-primary">Fingerprint Me</button> </p>
+    <div id="out"> </div>
+    <canvas width="300" height="300" id="my_Canvas"></canvas>
+  </div>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
